@@ -1,0 +1,81 @@
+/* Páginas de inicio de sesión y registro */
+
+.auth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  max-width: 980px;
+}
+
+.auth__side {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  background: var(--spinach-900);
+  border-radius: 24px;
+  color: #fff;
+  padding: 2.5rem;
+}
+
+.auth__side h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+}
+
+.auth__side ul {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #cfe3d6;
+}
+
+.auth__side li::before {
+  content: '✓';
+  margin-right: 0.6rem;
+  color: var(--citrus);
+  font-weight: 700;
+}
+
+.auth__card {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.auth__card h1 {
+  font-size: 2rem;
+}
+
+.auth__card .notice {
+  margin: 0;
+}
+
+.auth__card .btn {
+  width: 100%;
+}
+
+.auth__switch {
+  margin: 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.auth__switch a {
+  color: var(--spinach-700);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .auth {
+    grid-template-columns: 1fr;
+  }
+
+  .auth__side {
+    display: none;
+  }
+}

@@ -1,0 +1,80 @@
+/* Botones */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--spinach-700);
+  color: #fff;
+  font-weight: 700;
+  padding: .7rem 1.3rem;
+  transition: background .15s, transform .1s;
+  text-align: center;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--spinach-900);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(.98);
+}
+
+.btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.btn--lg {
+  padding: .95rem 1.7rem;
+  font-size: 1.05rem;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--spinach-700);
+  border: 1.5px solid var(--line);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: var(--leaf-100);
+}
+
+.btn--citrus {
+  background: var(--citrus);
+  color: var(--spinach-900);
+}
+
+.btn--citrus:hover:not(:disabled) {
+  background: var(--citrus-dark);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, .55);
+  color: #fff;
+}
+
+.btn--outline:hover:not(:disabled) {
+  background: rgba(255, 255, 255, .12);
+}
+
+.link-btn {
+  background: none;
+  border: 0;
+  color: var(--muted);
+  text-decoration: underline;
+  padding: .25rem;
+  font-size: .9rem;
+}
+
+.icon-btn {
+  background: var(--leaf-50);
+  border: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}

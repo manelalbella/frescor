@@ -1,0 +1,60 @@
+/* Home */
+
+.catalog {
+  padding: 2.5rem 0 4rem;
+}
+
+.catalog__bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin: 1.6rem 0 1.2rem;
+}
+
+.catalog__bar h2 {
+  font-size: 1.9rem;
+}
+
+.catalog__bar small {
+  font-family: var(--body);
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.select select {
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  padding: .5rem .8rem;
+  background: #fff;
+  color: var(--ink);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.2rem;
+  transition: opacity .2s;
+}
+
+.grid.is-loading {
+  opacity: .5;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .8rem;
+  }
+}

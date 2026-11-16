@@ -1,0 +1,33 @@
+/* Footer */
+
+.footer {
+  background: var(--spinach-900);
+  color: #b9d3c3;
+  padding: 2.5rem 0;
+  font-size: .95rem;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer strong {
+  color: #fff;
+}
+
+.footer__brand {
+  font-family: var(--display);
+  font-size: 1.4rem;
+}
+
+.footer p {
+  margin: .4rem 0 0;
+}
+
+@media (max-width: 900px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,142 @@
+/* Header */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--spinach-900);
+  color: #fff;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: .85rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: -.03em;
+}
+
+.logo__mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  background: var(--citrus);
+  border-radius: 12px;
+  font-size: 1.3rem;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  max-width: 560px;
+  background: #fff;
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.search input {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  -webkit-text-fill-color: var(--ink);
+  appearance: none;
+  padding: .55rem 1rem;
+  min-width: 0;
+  outline: none;
+}
+
+.search input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.search button {
+  border: 0;
+  background: var(--spinach-700);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0 1.2rem;
+}
+
+.search:focus-within {
+  box-shadow: 0 0 0 3px var(--citrus);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-left: auto;
+}
+
+.header__link {
+  font-weight: 500;
+  opacity: .9;
+}
+
+.header__link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--citrus);
+  color: var(--spinach-900);
+  border: 0;
+  font-weight: 700;
+  padding: .6rem 1rem;
+  border-radius: 999px;
+}
+
+.cart-btn__badge {
+  background: var(--tomato);
+  color: #fff;
+  font-size: .75rem;
+  min-width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  padding-inline: 5px;
+  animation: pop .3s;
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.35);
+  }
+}
+
+@media (max-width: 720px) {
+  .header__inner {
+    flex-wrap: wrap;
+    gap: .8rem;
+  }
+  .search {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+  }
+  .header__link {
+    display: none;
+  }
+  .cart-btn span:nth-of-type(1) {
+    display: none;
+  }
+}

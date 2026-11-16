@@ -1,0 +1,25 @@
+/* Toast */
+
+.toast-region {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+}
+
+.toast {
+  background: var(--spinach-900);
+  color: #fff;
+  padding: .8rem 1.3rem;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  animation: toast-in .25s;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}

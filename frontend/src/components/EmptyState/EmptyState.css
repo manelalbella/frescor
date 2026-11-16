@@ -1,0 +1,14 @@
+/* EmptyState */
+
+.empty {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--muted);
+}
+
+.empty__emoji {
+  font-size: 3.5rem;
+}

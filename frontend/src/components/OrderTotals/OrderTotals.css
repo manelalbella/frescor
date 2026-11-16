@@ -1,0 +1,36 @@
+/* OrderTotals */
+
+.totals {
+  margin: 0;
+  display: grid;
+  gap: .4rem;
+}
+
+.totals div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totals dt {
+  color: var(--muted);
+}
+
+.totals dd {
+  margin: 0;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.totals__total {
+  border-top: 1px solid var(--line);
+  padding-top: .7rem;
+  margin-top: .3rem;
+}
+
+.totals__total dt,
+.totals__total dd {
+  color: var(--ink);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.35rem;
+}

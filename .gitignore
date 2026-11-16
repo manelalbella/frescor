@@ -1,0 +1,9 @@
+node_modules/
+dist/
+target/
+.idea/
+.vscode/
+*.log
+.env
+# Base de datos local (H2 en archivo)
+data/

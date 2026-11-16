@@ -1,0 +1,5 @@
+/* Estilos globales. Los de cada componente viven junto a su .tsx */
+@import './variables.css';
+@import './base.css';
+@import './buttons.css';
+@import './common.css';

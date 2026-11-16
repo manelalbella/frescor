@@ -1,0 +1,90 @@
+/* Menú de usuario de la cabecera */
+
+.user-login {
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.55rem 1.1rem;
+}
+
+.user-login:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu__trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.25rem 0.9rem 0.25rem 0.3rem;
+}
+
+.user-menu__trigger:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.user-menu__avatar {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  background: var(--citrus);
+  border-radius: 50%;
+  color: var(--spinach-900);
+  font-family: var(--display);
+  font-weight: 800;
+}
+
+.user-menu__panel {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  z-index: 40;
+  display: grid;
+  min-width: 220px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.user-menu__email {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.user-menu__panel a,
+.user-menu__panel button {
+  background: none;
+  border: 0;
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.user-menu__panel a:hover,
+.user-menu__panel button:hover {
+  background: var(--leaf-50);
+}
+
+@media (max-width: 720px) {
+  .user-menu__name {
+    display: none;
+  }
+
+  .user-menu__trigger {
+    padding-right: 0.3rem;
+  }
+}

@@ -1,0 +1,111 @@
+/* Mi cuenta y listado de pedidos */
+
+.account__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.account__head > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.account__head h1 {
+  font-size: 2.2rem;
+}
+
+.account__head p {
+  margin: 0.2rem 0 0;
+}
+
+.account__avatar {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  background: var(--spinach-700);
+  border-radius: 50%;
+  color: #fff;
+  font-family: var(--display);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.account__title {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.orders {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.order-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.order-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+}
+
+.order-card__head p {
+  margin: 0.15rem 0 0;
+  font-size: 0.92rem;
+}
+
+.order-card__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.order-card__items small {
+  color: var(--muted);
+}
+
+.order-card__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 0.9rem;
+}
+
+.order-card__foot strong {
+  font-family: var(--display);
+  font-size: 1.3rem;
+}
+
+.status {
+  background: var(--leaf-100);
+  border-radius: 999px;
+  color: var(--spinach-700);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.25rem 0.8rem;
+  white-space: nowrap;
+}
+
+.status--cancelled {
+  background: #fdeeea;
+  color: var(--tomato);
+}
+
+.status--shipped {
+  background: #fff3cf;
+  color: #8a6100;
+}

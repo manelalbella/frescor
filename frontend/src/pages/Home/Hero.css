@@ -1,0 +1,125 @@
+/* Hero */
+
+.hero {
+  background: var(--spinach-900);
+  color: #fff;
+  padding: 3.5rem 0 4.5rem;
+  background-image:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 200, 61, .14),
+      transparent 45%);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+  font-weight: 800;
+  max-width: 14ch;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  max-width: 48ch;
+  color: #cfe3d6;
+  margin: 1.2rem 0 1.8rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+}
+
+.hero__perks {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem 1.6rem;
+  color: #a9c7b6;
+  font-size: .95rem;
+}
+
+.hero__perks li::before {
+  content: "\2713";
+  color: var(--citrus);
+  margin-right: .45rem;
+  font-weight: 700;
+}
+
+.receipt {
+  background: #fff;
+  color: var(--ink);
+  padding: 1.6rem 1.5rem 2.2rem;
+  transform: rotate(2.5deg);
+  box-shadow: 0 30px 50px -20px rgba(0, 0, 0, .5);
+  -webkit-mask:
+    conic-gradient(
+      from -45deg at bottom,
+      #0000,
+      #000 1deg 89deg,
+      #0000 90deg) 50%/18px 100%;
+  mask:
+    conic-gradient(
+      from -45deg at bottom,
+      #0000,
+      #000 1deg 89deg,
+      #0000 90deg) 50%/18px 100%;
+}
+
+.receipt__title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0 0 1rem !important;
+  color: var(--ink) !important;
+  border-bottom: 2px dashed var(--line);
+  padding-bottom: .8rem;
+}
+
+.receipt ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.receipt li,
+.receipt__total {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .4rem 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.receipt__total {
+  border-top: 2px dashed var(--line);
+  margin-top: .6rem;
+  padding-top: .9rem;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.receipt__note {
+  font-size: .85rem !important;
+  color: var(--muted) !important;
+  margin: .8rem 0 0 !important;
+}
+
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+  .receipt {
+    max-width: 340px;
+  }
+}

@@ -1,0 +1,124 @@
+/* CartDrawer */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 18, .5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s;
+  z-index: 40;
+}
+
+.overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(440px, 100%);
+  background: #fff;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform .3s cubic-bezier(.2, .8, .2, 1);
+  visibility: hidden;
+}
+
+.drawer.is-open {
+  transform: none;
+  visibility: visible;
+}
+
+.drawer__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.drawer__head h2 {
+  font-size: 1.5rem;
+}
+
+.shipping-meter {
+  padding: 1rem 1.4rem;
+  background: var(--leaf-50);
+  font-size: .95rem;
+}
+
+.shipping-meter p {
+  margin: 0 0 .5rem;
+}
+
+.meter {
+  height: 8px;
+  background: var(--line);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.meter div {
+  height: 100%;
+  background: var(--spinach-600);
+  border-radius: 99px;
+  transition: width .4s;
+}
+
+.drawer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 1.4rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: .9rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.line__emoji {
+  font-size: 2.2rem;
+  display: grid;
+  place-items: center;
+  background: var(--leaf-50);
+  border-radius: 12px;
+  height: 48px;
+}
+
+.line__info {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  align-items: flex-start;
+}
+
+.line__info small {
+  color: var(--muted);
+}
+
+.line__side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.drawer__foot {
+  padding: 1.2rem 1.4rem 1.4rem;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: .8rem;
+  justify-items: stretch;
+  text-align: center;
+}

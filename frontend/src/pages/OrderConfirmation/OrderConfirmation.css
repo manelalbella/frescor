@@ -1,0 +1,31 @@
+/* OrderConfirmation */
+
+.confirm {
+  max-width: 640px;
+  margin-inline: auto;
+  display: grid;
+  gap: 1.2rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.confirm__check {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--spinach-700);
+  color: #fff;
+  font-size: 2rem;
+}
+
+.confirm h1 {
+  font-size: 2.4rem;
+}
+
+.confirm__items,
+.confirm .totals {
+  width: 100%;
+  text-align: left;
+}

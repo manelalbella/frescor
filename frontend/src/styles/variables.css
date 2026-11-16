@@ -1,0 +1,27 @@
+/* Variables de diseño (colores, radios, tipografías) */
+
+:root {
+  --spinach-900: #0d3526;
+  --spinach-700: #14573b;
+  --spinach-600: #1b6f4a;
+  --leaf-100: #e3efe4;
+  --leaf-50: #f1f6f1;
+  --citrus: #ffc83d;
+  --citrus-dark: #e9b01c;
+  --tomato: #d93a26;
+  --paper: #f6f8f4;
+  --white: #ffffff;
+  --ink: #17231d;
+  --muted: #5d6b63;
+  --line: #dbe3dc;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(13, 53, 38, .06), 0 8px 24px -12px rgba(13, 53, 38, .18);
+  --display:
+    "Bricolage Grotesque",
+    system-ui,
+    sans-serif;
+  --body:
+    "DM Sans",
+    system-ui,
+    sans-serif;
+}

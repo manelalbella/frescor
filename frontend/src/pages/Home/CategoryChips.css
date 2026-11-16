@@ -1,0 +1,41 @@
+/* CategoryChips */
+
+.chips {
+  display: flex;
+  gap: .5rem;
+  overflow-x: auto;
+  padding-bottom: .6rem;
+  scrollbar-width: thin;
+}
+
+.chip {
+  white-space: nowrap;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  border-radius: 999px;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  transition: .15s;
+}
+
+.chip:hover {
+  border-color: var(--spinach-600);
+}
+
+.chip.is-active {
+  background: var(--spinach-700);
+  border-color: var(--spinach-700);
+  color: #fff;
+}
+
+.chip--sale {
+  color: var(--tomato);
+  border-color: #f0c3bc;
+  font-weight: 700;
+}
+
+.chip--sale.is-active {
+  background: var(--tomato);
+  border-color: var(--tomato);
+  color: #fff;
+}
