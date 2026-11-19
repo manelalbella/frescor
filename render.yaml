@@ -34,7 +34,7 @@ services:
     envVars:
       # Dirección pública del backend (si cambias el nombre del servicio, cámbiala aquí)
       - key: VITE_API_URL
-        value: https://frescor-api.onrender.com
+        value: https://frescor.onrender.com
     routes:
       - type: rewrite          # evita el 404 al recargar /login, /cuenta...
         source: /*
