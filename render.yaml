@@ -1,0 +1,41 @@
+# Blueprint de Render: crea backend y frontend a la vez.
+# Uso: en Render -> New -> Blueprint -> elige este repositorio.
+# Render te pedirá el valor de TURSO_AUTH_TOKEN (el resto ya está configurado).
+services:
+  # ---------- Backend: Spring Boot (se construye con backend/Dockerfile) ----------
+  - type: web
+    name: frescor-api
+    runtime: docker
+    plan: free
+    region: frankfurt          # misma región que tu base de datos de Turso (aws-eu-central-1)
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /api/categories
+    envVars:
+      - key: DB_URL
+        value: jdbc:postgresql://ep-broad-grass-baxzjpfz-pooler.c-8.eu-central-1.aws.neon.tech:5432/neondb?sslmode=require
+      - key: DB_USER
+        value: neondb_owner
+      - key: DB_PASSWORD
+        value: npg_x5GerpwJWO9i
+      - key: SPRING_PROFILES_ACTIVE
+        value: postgres
+      # Dirección pública del frontend (si cambias el nombre del servicio, cámbiala aquí)
+      - key: APP_CORS_ALLOWED_ORIGINS
+        value: https://frescor-web.onrender.com
+
+  # ---------- Frontend: React (sitio estático) ----------
+  - type: web
+    name: frescor-web
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install --include=dev && npm run build
+    staticPublishPath: dist
+    envVars:
+      # Dirección pública del backend (si cambias el nombre del servicio, cámbiala aquí)
+      - key: VITE_API_URL
+        value: https://frescor-api.onrender.com
+    routes:
+      - type: rewrite          # evita el 404 al recargar /login, /cuenta...
+        source: /*
+        destination: /index.html
