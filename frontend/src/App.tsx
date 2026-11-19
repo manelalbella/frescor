@@ -17,7 +17,6 @@ import ProductDetail from './pages/ProductDetail/ProductDetail'
 export default function App() {
   const { pathname } = useLocation()
 
-  // Al cambiar de página, volver arriba
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [pathname])
